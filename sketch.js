@@ -22,9 +22,6 @@ function draw() {
     
   });
   console.log(notes);
-  if(notes.length > 5) {
-    notes.pop();
-  }
   stroke(0, 0, 255);
   strokeWeight(10);
   ellipse(400, 300, 350, 350);
