@@ -2,15 +2,25 @@ let notes = [];
 let currentId = 0;
 let result = true;
 
+//variables for circle assets
+let outOrng;
+
+//variables for scaling animation
+let a = 0.0;
+let s = 0.0;
+
 function setup() {
   const bpm = 120;
-  console.log('yo');
+  //console.log('yo');
   createCanvas(2000, 720);
 
   setInterval(() => {
     notes.push(new Note(currentId));
     currentId++;
   }, 2000);
+    
+    //test circle
+    outOrng = loadImage('assets/image/Outer_Orange.png');
 };
 
 function draw() {
@@ -25,6 +35,23 @@ function draw() {
   stroke(0, 0, 255);
   strokeWeight(10);
   ellipse(400, 300, 350, 350);
+    
+    //animation
+    //a += 0.04;
+    s += 1;
+    
+    if(s>10){
+        s=0;
+    }
+    
+    console.log(s);
+    
+    
+    scale(s);
+    
+    image(outOrng, width/3, height/3);
+    
+    
 };
 
 function keyPressed() {
@@ -58,6 +85,9 @@ class Note {
 
   draw(){
     if(this.active) {
+        //Attempt at making image
+        scale(rate)
+        image(outOrng, width/3, height/3);
       noFill();
       strokeWeight(5);
       stroke(255, 255, 255, this.opacity);
