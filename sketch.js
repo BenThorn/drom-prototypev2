@@ -32,11 +32,13 @@ function draw() {
     
   });
   console.log(notes);
+  
+  //Draws Target Circle
   stroke(0, 0, 255);
   strokeWeight(10);
   ellipse(400, 300, 350, 350);
     
-    //animation
+    /*//animation
     //a += 0.04;
     s += 1;
     
@@ -47,11 +49,7 @@ function draw() {
     console.log(s);
     
     
-    scale(s);
-    
-    image(outOrng, width/3, height/3);
-    
-    
+    scale(s);*/
 };
 
 function keyPressed() {
