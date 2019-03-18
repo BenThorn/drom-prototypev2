@@ -21,3 +21,5 @@ void loop()
     analogWrite(LEDstrip,0);
   }
 }
+
+link for explination video: https://www.youtube.com/watch?v=6ZjLd2ifxhY
