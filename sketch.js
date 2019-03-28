@@ -37,19 +37,6 @@ function draw() {
   stroke(0, 0, 255);
   strokeWeight(10);
   ellipse(400, 300, 350, 350);
-    
-    /*//animation
-    //a += 0.04;
-    s += 1;
-    
-    if(s>10){
-        s=0;
-    }
-    
-    console.log(s);
-    
-    
-    scale(s);*/
 };
 
 function keyPressed() {
@@ -84,8 +71,24 @@ class Note {
   draw(){
     if(this.active) {
         //Attempt at making image
-        scale(rate)
-        image(outOrng, width/3, height/3);
+        //If this is put in target cirlce flashes to bottom right of screen and back
+        //scale(this.rate)
+        //image(outOrng, width/3, height/3);
+        
+        /*//animation
+        //a += 0.04;
+        s += 1;
+    
+        if(s>10){
+            s=0;
+        }
+    
+        console.log(s);
+    
+    
+        scale(s);*/
+        
+        
       noFill();
       strokeWeight(5);
       stroke(255, 255, 255, this.opacity);
